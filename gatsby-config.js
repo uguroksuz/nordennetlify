@@ -8,19 +8,19 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
+
       resolve: 'gatsby-source-sanity',
       options: {
-        projectId,
-        dataset,
-        // To enable preview of drafts, copy .env-example into .env,
-        // and add a token with read permissions
-        token: process.env.SANITY_TOKEN,
-        watchMode: true,
-        overlayDrafts: true
-      }
+      projectId: 'wzscd3fa',
+      dataset: 'production',
+      // a token with read permissions is required
+      // if you have a private dataset
+      token: 'skG0vwkhIeDRO6aHunKLOXYLBN7ay5gTY6WFhSUpsiKCiVWB2aWbISruhylU255IO5xIrk3MwAhpmDl1lh9vUBX6uAB9e5J64Hv3qkUlgv4IEjtvcQzNP8v3DeEJ4MFjiMYo3DyuBKx3Zn8IZWBYwePfXe8ujv2PdzBZXMXN7YuMpfIWzOB3',
+
+      },
     }
+
   ],
-  pathPrefix: "/nordensoft",
 }
 
 /**
@@ -30,7 +30,7 @@ module.exports = {
  * with directions to enter the info manually or in the environment.
  */
 
-function requireConfig (path) {
+function requireConfig(path) {
   try {
     return require('../studio/sanity.json')
   } catch (e) {
